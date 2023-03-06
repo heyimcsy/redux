@@ -2,6 +2,7 @@ import './App.css'
 import styled from 'styled-components'
 import { toBePartiallyChecked } from '@testing-library/jest-dom/dist/matchers'
 import TestPage from './components/Testpage'
+import GlobalStyle from './GlobalStyle'
 
 const StContainer = styled.div`
   display: flex;
@@ -38,7 +39,10 @@ function App() {
     //     return <StBox borderColor={box}>{getBoxName(box)}</StBox>
     //   })}
     // </StContainer>
-    <TestPage title="제목입니다" contents="내용입니다" />
+    <>
+      <GlobalStyle />
+      <TestPage title="제목입니다" contents="내용입니다" />
+    </>
   )
 }
 // props: 부모컴 => 자식 컴
