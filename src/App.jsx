@@ -1,6 +1,7 @@
 import './App.css'
 import styled from 'styled-components'
 import { toBePartiallyChecked } from '@testing-library/jest-dom/dist/matchers'
+import TestPage from './components/Testpage'
 
 const StContainer = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const StBox = styled.div`
   margin: 20px;
 `
 //box color
-const boxList = ['red', 'green', 'blue', 'b']
+const boxList = ['red', 'green', 'blue', 'black']
 
 //색을 넣으면 이름을 반환
 const getBoxName = (color) => {
@@ -31,12 +32,13 @@ const getBoxName = (color) => {
 
 function App() {
   return (
-    <StContainer>
-      {/* <StBox borderColor="red">박스</StBox> */}
-      {boxList.map((box) => {
-        return <StBox borderColor={box}>{getBoxName(box)}</StBox>
-      })}
-    </StContainer>
+    // <StContainer>
+    //   {/* <StBox borderColor="red">박스</StBox> */}
+    //   {boxList.map((box) => {
+    //     return <StBox borderColor={box}>{getBoxName(box)}</StBox>
+    //   })}
+    // </StContainer>
+    <TestPage title="제목입니다" contents="내용입니다" />
   )
 }
 // props: 부모컴 => 자식 컴
